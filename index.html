@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Earn From Games</title>
+    <title>Offer Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: linear-gradient(135deg, #1d2671, #c33764);
-    color: white;
-    text-align: center;
-}
+        .container {
+            margin-top: 100px;
+        }
 
-.container {
-    margin-top: 120px;
-}
+        h1 {
+            color: #333;
+        }
 
-h1 {
-    font-size: 36px;
-}
+        #timer {
+            font-size: 40px;
+            color: red;
+            margin: 20px;
+        }
 
-p {
-    font-size: 18px;
-}
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
 
-.btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 30px;
-    border: none;
-    background: white;
-    color: #c33764;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-#timer {
-    font-size: 30px;
-    margin-top: 20px;
-    font-weight: bold;
-}
-</style>
+        .btn:hover {
+            background: darkgreen;
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="container">
     <h1>🎮 Play Games & Earn Money</h1>
-    <p>Worldwide Offer 🌍</p>
+    <p>🌍 Worldwide Offer</p>
 
     <div id="timer">5</div>
 
@@ -59,18 +53,22 @@ p {
 <script>
 let time = 5;
 
+// 👉 اپنا لنک یہاں لگائیں
+let offerLink =https://www.profitablecpmratenetwork.com/nhusha1c?key=35806959de549fa5c5eade417e765b12
+
 let countdown = setInterval(function(){
     time--;
     document.getElementById("timer").innerText = time;
 
     if(time <= 0){
         clearInterval(countdown);
-        goOffer();
+        window.open(offerLink, "_blank"); // auto open
     }
 }, 1000);
 
+// 👉 button click function
 function goOffer(){
-    window.location.href = https://www.profitablecpmratenetwork.com/nhusha1c?key=35806959de549fa5c5eade417e765b12;
+    window.open(offerLink, "_blank");
 }
 </script>
 
