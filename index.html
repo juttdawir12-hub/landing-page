@@ -1,8 +1,9 @@
 <script>
-let time = 5;
-let offerLink = "https://example.com"; // https://www.profitablecpmratenetwork.com/nhusha1c?key=35806959de549fa5c5eade417e765b12
+window.onload = function(){
 
-// Timer start
+let time = 5;
+let offerLink =https://www.profitablecpmratenetwork.com/nhusha1c?key=35806959de549fa5c5eade417e765b12;
+
 document.getElementById("timer").innerText = time;
 
 let countdown = setInterval(function(){
@@ -11,12 +12,9 @@ let countdown = setInterval(function(){
 
     if(time <= 0){
         clearInterval(countdown);
-        window.location.href = offerLink; // ✅ redirect fix
+        window.location.href = offerLink;
     }
 }, 1000);
 
-// Button click
-function goOffer(){
-    window.open(offerLink, "_blank");
 }
 </script>
