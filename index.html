@@ -1,60 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Offer Page</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background: #f4f4f4;
-        }
-
-        .container {
-            margin-top: 100px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        #timer {
-            font-size: 40px;
-            color: red;
-            margin: 20px;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            font-size: 18px;
-            background: green;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px;
-        }
-
-        .btn:hover {
-            background: darkgreen;
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-    <h1>🎮 Play Games & Earn Money</h1>
-    <p>🌍 Worldwide Offer</p>
-
-    <div id="timer">5</div>
-
-    <button class="btn" onclick="goOffer()">👉 Start Now</button>
-</div>
-
 <script>
 let time = 5;
+let offerLink = "https://example.com"; // https://www.profitablecpmratenetwork.com/nhusha1c?key=35806959de549fa5c5eade417e765b12
 
-// 👉 اپنا لنک یہاں لگائیں
-let offerLink =https://www.profitablecpmratenetwork.com/nhusha1c?key=35806959de549fa5c5eade417e765b12
+// Timer start
+document.getElementById("timer").innerText = time;
 
 let countdown = setInterval(function(){
     time--;
@@ -62,15 +11,12 @@ let countdown = setInterval(function(){
 
     if(time <= 0){
         clearInterval(countdown);
-        window.open(offerLink, "_blank"); // auto open
+        window.location.href = offerLink; // ✅ redirect fix
     }
 }, 1000);
 
-// 👉 button click function
+// Button click
 function goOffer(){
     window.open(offerLink, "_blank");
 }
 </script>
-
-</body>
-</html>
