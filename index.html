@@ -2,66 +2,39 @@
 <html>
 <head>
     <title>Offer Page</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background: #f4f4f4;
-        }
-        .container {
-            margin-top: 100px;
-        }
-        #timer {
-            font-size: 40px;
-            color: red;
-            margin: 20px;
-        }
-        .btn {
-            padding: 15px 30px;
-            font-size: 18px;
-            background: green;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
-<body>
+<body style="text-align:center; font-family:Arial; background:#f4f4f4;">
 
-<div class="container">
     <h1>🎮 Play Games & Earn Money</h1>
     <p>🌍 Worldwide Offer</p>
 
-    <div id="timer">5</div>
+    <h2 id="timer">5</h2>
 
-    <button class="btn" onclick="goOffer()">👉 Start Now</button>
-</div>
+    <button onclick="goOffer()" 
+    style="padding:15px 30px; font-size:18px; background:green; color:white; border:none; border-radius:8px;">
+    👉 Start Now
+    </button>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+var time = 5;
+var offerLink = "https://google.com"; // 🔥 TEST کے لیے Google رکھیں
 
-    let time = 5;
-    let offerLink = "https://example.com"; // اپنا لنک ڈالیں
+var timer = document.getElementById("timer");
 
-    let timerElement = document.getElementById("timer");
+var countdown = setInterval(function() {
+    time--;
+    timer.innerHTML = time;
 
-    let countdown = setInterval(function(){
-        time--;
-        timerElement.innerText = time;
-
-        if(time <= 0){
-            clearInterval(countdown);
-            window.location.href = offerLink; // ✅ redirect (GitHub safe)
-        }
-    }, 1000);
-
-    window.goOffer = function(){
-        window.location.href = offerLink; // button بھی same tab میں
+    if (time <= 0) {
+        clearInterval(countdown);
+        window.location.href = offerLink;
     }
+}, 1000);
 
-});
+function goOffer() {
+    window.location.href = offerLink;
+}
 </script>
 
 </body>
