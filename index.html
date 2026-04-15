@@ -1,30 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Offer Page</title>
+<title>Earn Money Online</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+}
+
+/* Video */
+.video {
+    margin: 20px;
+}
+
+/* Posts */
+.post {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Button */
+.btn {
+    padding: 12px 25px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: darkgreen;
+}
+
+/* Timer */
+#timer {
+    font-size: 30px;
+    color: red;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+}
+</style>
+
 </head>
 
-<body style="text-align:center; font-family:Arial; background:#f4f4f4;">
+<body>
 
-    <h1>🎮 Play Games & Earn Money</h1>
-    <p>🌍 Worldwide Offer</p>
+<div class="header">
+🎮 Watch Video & Earn Money
+</div>
 
-    <h2 id="timer">5</h2>
+<h2>🔥 Limited Time Offer</h2>
 
-    <button onclick="goOffer()" 
-    style="padding:15px 30px; font-size:18px; background:green; color:white; border:none; border-radius:8px;">
-    👉 Start Now
-    </button>
+<div id="timer">5</div>
+
+<!-- 🎥 YouTube Video -->
+<div class="video">
+<iframe width="300" height="180" 
+src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- POSTS -->
+<div class="post">
+    <h3>💰 Earn $50 Daily</h3>
+    <p>Watch video & complete simple steps.</p>
+    <button class="btn" onclick="goOffer()">Start Now</button>
+</div>
+
+<div class="post">
+    <h3>📱 Install & Earn</h3>
+    <p>Download apps and earn money.</p>
+    <button class="btn" onclick="goOffer()">Join Now</button>
+</div>
+
+<div class="post">
+    <h3>🎮 Play Games Offer</h3>
+    <p>Play games & get paid.</p>
+    <button class="btn" onclick="goOffer()">Play Now</button>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+Someone earned $25 just now 💸
+</div>
 
 <script>
 var time = 5;
-var offerLink = "https://www.profitablecpmratenetwork.com/kzawyffjx9?key=902bad60174a6d7abd0ae259b9ce933b"; // 🔥 TEST کے لیے Google رکھیں
 
-var timer = document.getElementById("timer");
+// ✅ آپ کا link
+var offerLink = "https://www.profitablecpmratenetwork.com/kzawyffjx9?key=902bad60174a6d7abd0ae259b9ce933b";
 
+// Timer
 var countdown = setInterval(function() {
     time--;
-    timer.innerHTML = time;
+    document.getElementById("timer").innerHTML = time;
 
     if (time <= 0) {
         clearInterval(countdown);
@@ -32,9 +128,21 @@ var countdown = setInterval(function() {
     }
 }, 1000);
 
+// Button
 function goOffer() {
     window.location.href = offerLink;
 }
+
+// Fake popup
+setInterval(function(){
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+
+    setTimeout(function(){
+        popup.style.display = "none";
+    }, 3000);
+
+}, 5000);
 </script>
 
 </body>
