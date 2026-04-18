@@ -1,141 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Earn Money Online</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Earn Online</title>
+
+<!-- 🔥 AUTO REDIRECT AFTER 25 SECONDS -->
+<meta http-equiv="refresh" content="25;url=https://youtu.be/GV0uzsanCAc">
 
 <style>
 body {
-    font-family: Arial;
-    background: #f4f4f4;
-    text-align: center;
-    margin: 0;
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  background: #f4f4f4;
 }
 
-.header {
-    background: #111;
-    color: white;
-    padding: 20px;
-    font-size: 22px;
+header {
+  background: #111;
+  color: white;
+  padding: 60px 20px;
 }
 
-.video {
-    margin: 20px;
-}
-
-.post {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 300px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+h1 {
+  font-size: 32px;
 }
 
 .btn {
-    padding: 12px 25px;
-    background: green;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
+  display: inline-block;
+  background: red;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.btn:hover {
-    background: darkgreen;
+section {
+  padding: 40px 20px;
 }
 
-#timer {
-    font-size: 30px;
-    color: red;
+iframe {
+  max-width: 100%;
 }
 
-.popup {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: black;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    display: none;
+footer {
+  background: #111;
+  color: white;
+  padding: 15px;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="header">
-🎮 Watch Video & Earn Money
-</div>
+<!-- 🔥 HERO -->
+<header>
+  <h1>Earn Online with YouTube + Website</h1>
+  <p>Start your earning journey today - No investment needed</p>
+  <a href="https://youtu.be/GV0uzsanCAc" class="btn">Start Now</a>
+</header>
 
-<h2>🔥 Limited Time Offer</h2>
+<!-- 🎥 VIDEO -->
+<section>
+  <h2>Watch Full Guide</h2>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/GV0uzsanCAc"
+    frameborder="0" allowfullscreen>
+  </iframe>
+</section>
 
-<div id="timer">5</div>
+<!-- 💡 FEATURES -->
+<section>
+  <h2>What You Will Learn</h2>
+  <p>✔ YouTube Earning</p>
+  <p>✔ Website Monetization</p>
+  <p>✔ Free AI Tools</p>
+</section>
 
-<!-- 🎥 YouTube Video (آپ کی ویڈیو add کر دی گئی ہے) -->
-<div class="video">
-<iframe width="300" height="180" 
-src="https://www.youtube.com/embed/GV0uzsanCAc" 
-frameborder="0" allowfullscreen></iframe>
-</div>
+<!-- 🔥 CTA -->
+<section>
+  <a href="https://youtu.be/GV0uzsanCAc" class="btn">
+    Start Earning Now
+  </a>
+</section>
 
-<!-- POSTS -->
-<div class="post">
-    <h3>💰 Earn $50 Daily</h3>
-    <p>Watch video & complete simple steps.</p>
-    <button class="btn" onclick="goOffer()">Start Now</button>
-</div>
+<!-- 👇 FOOTER -->
+<footer>
+  <p>© 2026 All Rights Reserved</p>
+</footer>
 
-<div class="post">
-    <h3>📱 Install & Earn</h3>
-    <p>Download apps and earn money.</p>
-    <button class="btn" onclick="goOffer()">Join Now</button>
-</div>
-
-<div class="post">
-    <h3>🎮 Play Games Offer</h3>
-    <p>Play games & get paid.</p>
-    <button class="btn" onclick="goOffer()">Play Now</button>
-</div>
-
-<!-- Popup -->
-<div class="popup" id="popup">
-Someone earned $25 just now 💸
-</div>
-
+<!-- 🔥 AUTO REFRESH EVERY 25 SECONDS -->
 <script>
-var time = 5;
-
-var offerLink = "https://www.profitablecpmratenetwork.com/kzawyffjx9?key=902bad60174a6d7abd0ae259b9ce933b";
-
-// Timer
-var countdown = setInterval(function() {
-    time--;
-    document.getElementById("timer").innerHTML = time;
-
-    if (time <= 0) {
-        clearInterval(countdown);
-        window.location.href = offerLink;
-    }
-}, 1000);
-
-// Button
-function goOffer() {
-    window.location.href = offerLink;
-}
-
-// Fake popup
-setInterval(function(){
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-
-    setTimeout(function(){
-        popup.style.display = "none";
-    }, 3000);
-
-}, 5000);
+setInterval(function() {
+  location.reload();
+}, 25000);
 </script>
 
 </body>
